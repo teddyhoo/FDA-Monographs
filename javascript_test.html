@@ -1,0 +1,32 @@
+<html>
+<head>
+<script type = "text/javascript">
+
+	data = 
+	{"products":
+	    [{"Product A":
+	         {"Type 1":
+	               {"subType":[{"layoutName":"1 x 13","layoutModules":13}]}
+	         }
+	    },
+	    {"Product B":
+	         {"Type 1":
+	               {"subType":[{"layoutName":"2 x 13","layoutModules":13}]}
+	         }
+	    }]
+	};
+
+	var content = "";
+	for(index in data)
+	    for(product in data[index])
+	        content += Object.keys(data[index][product])[0] + ", ";
+
+	document.getElementById("content").innerHTML = content;
+	</script>
+
+ </head>
+ <body>
+<h1> Javascript test </h1>
+<textarea id="content">
+ </body>
+ </html>
